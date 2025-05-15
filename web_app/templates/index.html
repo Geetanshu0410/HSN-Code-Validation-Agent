@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HSN Code Validator</title>
+</head>
+<body>
+    <h1>HSN Code Validation Agent</h1>
+    <form method="post">
+        <label for="hsn_code">Enter HSN Code:</label>
+        <input type="text" id="hsn_code" name="hsn_code" value="{{ code }}">
+        <button type="submit">Validate</button>
+    </form>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    {% if result %}
+        <p style="color: green;">{{ result }}</p>
+    {% endif %}
+</body>
+</html>
